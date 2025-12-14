@@ -1,12 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>SafeNet Chad — Cybersecurity</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeNet Chad - Cyber-sécurité au Tchad</title>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>SafeNet Chad</h1>
-    <p>Solutions de cybersécurité et assistance aux utilisateurs au Tchad.</p>
+<body class="font-sans text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-xl font-bold">SafeNet Chad</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#accueil" class="text-gray-800 hover:text-blue-600">Accueil</a>
+        <a href="#services" class="text-gray-800 hover:text-blue-600">Nos Services</a>
+        <a href="#apropos" class="text-gray-800 hover:text-blue-600">À propos</a>
+        <a href="#contact" class="text-gray-800 hover:text-blue-600">Contact</a>
+        <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Nous contacter</a>
+      </div>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <!-- hamburger icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-3">
+      <a href="#accueil" class="block py-2 text-gray-800 hover:text-blue-600">Accueil</a>
+      <a href="#services" class="block py-2 text-gray-800 hover:text-blue-600">Nos Services</a>
+      <a href="#apropos" class="block py-2 text-gray-800 hover:text-blue-600">À propos</a>
+      <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-600">Contact</a>
+      <a href="#contact" class="block my-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-center">Nous contacter</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="accueil" class="bg-gray-50 py-16">
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+        Sécuriser le monde numérique tchadien
+      </h1>
+      <p class="text-lg text-gray-600 mb-6">
+        Chez <span class="font-semibold">SafeNet Chad</span>, nous protégeons les utilisateurs tchadiens contre les menaces en ligne. Nos experts offrent un soutien personnalisé pour reprendre le contrôle de vos comptes et assurer votre sécurité numérique.
+      </p>
+      <a href="#contact" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700">
+        Contactez-nous
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Nos Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="text-4xl mb-4">🔓</div>
+          <h3 class="text-xl font-semibold mb-2">Récupération de comptes piratés/perdus</h3>
+          <p class="text-gray-600">Nous aidons à restaurer l'accès à vos comptes compromis ou oubliés, en toute sécurité.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="text-4xl mb-4">🚫</div>
+          <h3 class="text-xl font-semibold mb-2">Appels de bannissement/restriction</h3>
+          <p class="text-gray-600">Nous assistons dans les procédures pour lever des interdictions ou restrictions injustifiées sur vos comptes.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-semibold mb-2">Signalement de faux comptes</h3>
+          <p class="text-gray-600">Nous signalons pour vous les faux profils ou usurpateurs afin de protéger votre identité numérique.</p>
+        </div>
+        <!-- Service 4 -->
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="text-4xl mb-4">🔍</div>
+          <h3 class="text-xl font-semibold mb-2">Gestion de diffamation/usurpation d’identité</h3>
+          <p class="text-gray-600">Nous conseillons et accompagnons en cas de diffamation en ligne ou d'usurpation d'identité.</p>
+        </div>
+        <!-- Service 5 -->
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="text-4xl mb-4">📞</div>
+          <h3 class="text-xl font-semibold mb-2">Assistance technique personnalisée</h3>
+          <p class="text-gray-600">Un support technique dédié pour répondre à toutes vos questions et besoins en cybersécurité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos Section -->
+  <section id="apropos" class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-4">À propos de nous</h2>
+      <p class="text-gray-600 mb-4">
+        <span class="font-semibold">Notre mission</span> : rendre le cyberspace tchadien sûr pour tous. Nous sommes déterminés à protéger les internautes tchadiens, qu'ils soient novices ou expérimentés, des menaces numériques et à assurer leur tranquillité d'esprit en ligne.
+      </p>
+      <p class="text-gray-600">
+        <span class="font-semibold">Nos valeurs</span> : intégrité, expertise et engagement envers nos clients. Nous valorisons la confiance, la transparence et une approche pédagogique pour vous expliquer clairement chaque solution. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Contact</h2>
+      <form class="space-y-4" action="#" method="post">
+        <div>
+          <label class="block text-gray-700">Nom</label>
+          <input type="text" class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300" placeholder="Votre nom" required>
+        </div>
+        <div>
+          <label class="block text-gray-700">E-mail</label>
+          <input type="email" class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300" placeholder="Votre adresse e-mail" required>
+        </div>
+        <div>
+          <label class="block text-gray-700">Message</label>
+          <textarea rows="4" class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700">Envoyer</button>
+      </form>
+      <p class="text-gray-500 text-sm mt-4">Les liens vers nos réseaux sociaux seront ajoutés bientôt.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-white text-center text-sm">
+    SafeNet Chad – Tous droits réservés.
+  </footer>
+
+  <!-- JS for mobile menu -->
+  <script src="script.js"></script>
 </body>
 </html>
